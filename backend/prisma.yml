@@ -1,3 +1,8 @@
-endpoint: http://localhost:4466
+endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
 databaseType: document
+# secret: ${env:PRISMA_SECRET} 
+# CHANGE THIS WHEN DEPLOYING TO PROD
+hooks:
+  post-deploy: 
+    - graphql get-schema -p prisma

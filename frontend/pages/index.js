@@ -1,10 +1,10 @@
-import Items from '../components/Items'
+import Items from "../components/Items";
 
-const Home = (props) => (
+const Home = props => (
   <div>
     Hello
-    {/* <Items /> */}
+    <Items />
   </div>
-)
+);
 
-export default Home
+export default Home;
